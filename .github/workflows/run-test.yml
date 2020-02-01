@@ -1,0 +1,17 @@
+name: run test
+on: push
+jobs:
+  unit-test:
+    name: unit test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v1
+      - name: setup Node.js
+        uses: actions/node-setup@v1
+        with:
+          node-version: 12.x
+      - name: setup repository
+        run: npm ci
+      - name: run test
+        run: npm run test
