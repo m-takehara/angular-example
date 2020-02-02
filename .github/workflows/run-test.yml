@@ -24,4 +24,4 @@ jobs:
         env:
           ACTIONS_DEPLOY_KEY: ${{secrets.GITHUB_ACTIONS_DEPLOY_KEY}}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./dist
+          PUBLISH_DIR: ./dist/angular-example
